@@ -1,0 +1,42 @@
+﻿body {
+    margin: 0 auto;
+    padding: 0;
+    scroll-behavior: smooth;
+    width: 100%;
+    height: 100%;
+    background: url(../Assets/layered-waves-haikei.svg);
+    background-repeat: no-repeat;
+    background-size: cover
+}
+
+section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 400px;
+    padding: 100px 20vw;
+    margin-top: 10%;
+}
+
+    section h1, h3 {
+        color: antiquewhite;
+        display: block;
+        float: none;
+        clear: both;
+    }
+
+#login {
+    color: black;
+    margin-top: 5%;
+    justify-content: center;
+}
+
+input {
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+#btnSubmit {
+    margin-left: 30%
+}
