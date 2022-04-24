@@ -5,6 +5,11 @@ var user = document.getElementById("txtUsuario");
 var pass = document.getElementById("txtPassword");
 var btnIngresar = document.getElementById("btnSubmit");
 
+var auth = {
+    login: document.getElementById("login");,
+    pass: document.getElementById("txtPassword");
+}
+
 btnIngresar.addEventListener("click", () => {
-    console.log(user.value, pass.value);
+    console.log(auth);
 });
