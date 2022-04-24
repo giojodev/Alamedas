@@ -12,4 +12,5 @@ var auth = {
 
 btnIngresar.addEventListener("click", () => {
     console.log(auth);
+    fetch('localhost/Services/WSLogin.cs')
 });
