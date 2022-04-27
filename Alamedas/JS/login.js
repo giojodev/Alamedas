@@ -1,16 +1,31 @@
 ﻿'use strict'
 
 var login = document.getElementById("login");
-var user = document.getElementById("txtUsuario");
-var pass = document.getElementById("txtPassword");
 var btnIngresar = document.getElementById("btnSubmit");
 
-var auth = {
-    login: document.getElementById("login");,
-    pass: document.getElementById("txtPassword");
-}
+
+
 
 btnIngresar.addEventListener("click", () => {
+    let prueba="test"
+    var auth = {
+        login: document.getElementById("txtUsuario").value,
+        pass: document.getElementById("txtPassword").value
+    }
     console.log(auth);
-    fetch('localhost/Services/WSLogin.cs')
+    //const peticion = { method: 'POST', headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' }, body: 'Test' }
+    //fetch('localhost:44326/Services/WSLogin.asmx/AuthLogin', peticion).catch(error => { console.error('Ha ocurrido un error', error); });
+    fetch('Login.aspx/AuthLogin', {
+        method: 'POST',
+        headers: {
+            'Accept': 'application/json','Content-Type': 'application/json',
+        },
+        body: JSON.stringify(prueba),
+    })
+    .then((response) => response.json())
+    .then((data) => {
+        console.log('Success:', data);
+    }).catch((error) => {
+        console.log("Error", error);
+    });
 });
