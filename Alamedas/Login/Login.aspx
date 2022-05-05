@@ -17,9 +17,12 @@
    
         
         <form class="form" id="login" runat="server" >
-
-            <input type="text" class="input" id="txtUsuario" placeholder="Usuario" /><br/><br/>
-            <input type="password" class="input" id="txtPassword" placeholder="Password" /><br/><br/>
+            <label class="col-form-label" style="display:none">CONTRASEÑA O USUARIO INCORRECTO</label>
+            <%--<asp:TextBox ID="txtUsuario" runat="server" class="input" Text="Usuario"></asp:TextBox><br/><br/>
+            <asp:TextBox ID="txtPassword" runat="server" class="input" Text="Contraseña"></asp:TextBox><br/><br/>--%>
+            
+            <input type="text" class="input" id="txtUsuario" placeholder="Usuario" runat="server"/><br/><br/>
+            <input type="password" class="input" id="txtPassword" placeholder="Password" runat="server"/><br/><br/>
             <%--<input type="submit" id="btnSubmit" class="btn btn-info" placeholder="Ingresar" value="Ingresar" />--%>
             <asp:Button ID="btnLogin" runat="server"  Text="Ingresar" class="btn btn-info" OnClick="btnLogin_Click"/>
         </form>
