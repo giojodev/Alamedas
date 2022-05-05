@@ -13,6 +13,7 @@ namespace Alamedas.Login
 {
     public partial class Login : System.Web.UI.Page
     {
+       
         protected void Page_Load(object sender, EventArgs e)
         {
             
@@ -31,7 +32,10 @@ namespace Alamedas.Login
 
         protected void btnLogin_Click(object sender, EventArgs e)
         {
-            Response.Redirect("../Pages/Default.aspx");
+            string test = txtUsuario.Value;
+            string test2 = txtPassword.Value;
+            string tesst = test + " " + test2;
+            //Response.Redirect("../Pages/Default.aspx");
         }
     }
 }
