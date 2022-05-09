@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Configuration;
 using System.Web.Mvc;
 using System.Web.Script.Services;
 using System.Web.Services;
@@ -13,14 +14,13 @@ namespace Alamedas.Login
 {
     public partial class Login : System.Web.UI.Page
     {
-       
+        string pass = WebConfigurationManager.AppSettings["osmany"];
         protected void Page_Load(object sender, EventArgs e)
         {
+            lblError.Visible = false;   
             
         }
-        [WebMethod]
         
-        [ScriptMethod]
         
         public static int AuthLogin(List<string> auth)
         {
@@ -32,10 +32,28 @@ namespace Alamedas.Login
 
         protected void btnLogin_Click(object sender, EventArgs e)
         {
+            if (ValidarLogin() != 0)
+            {
+                Response.Redirect("../Pages/Inicio.aspx");
+            }
+            else
+            {
+                lblError.Visible = true;
+            }
+           
+        }
+        public int ValidarLogin()
+        {
             string test = txtUsuario.Value;
-            string test2 = txtPassword.Value;
-            string tesst = test + " " + test2;
-            //Response.Redirect("../Pages/Default.aspx");
+            string password = txtPassword.Value;
+            if (pass == password)
+            {
+                return 1;
+            }
+            else
+            {
+                return 0;
+            }
         }
     }
 }
