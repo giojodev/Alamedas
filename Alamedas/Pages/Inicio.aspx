@@ -2,14 +2,14 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div style="display:flex">
-        <div>
+    <div class="dashboard">
+        <div class="dashboardinfo">
             <h1>PRUEBA</h1>
         </div>
-        <div>
+        <div class="dashboardinfo">
             <h2>prueba</h2>
         </div>
-        <div>
+        <div class="dashboardinfo">
             <h3>PRUEBA</h3>
         </div>
     </div>
