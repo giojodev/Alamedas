@@ -1,4 +1,4 @@
-﻿body {
+﻿.bodyLogin {
     margin: 0 auto;
     padding: 0;
     scroll-behavior: smooth;
@@ -39,4 +39,14 @@ input {
 
 #btnLogin {
     margin-left: 30%
+}
+.dashboard{
+    display:flex;
+    justify-content:space-around
+}
+.dashboardinfo{
+    border:solid 1px black;
+    display:block;
+    width:inherit;
+    height:100px;
 }
