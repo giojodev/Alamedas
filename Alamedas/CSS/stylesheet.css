@@ -40,9 +40,11 @@ input {
 #btnLogin {
     margin-left: 30%
 }
-.dashboard{
+.dashboardfila1{
     display:flex;
-    justify-content:space-around
+    justify-content:space-around;
+    clear:both;
+    float:left;
 }
 .dashboardinfo{
     border:solid 1px black;
