@@ -163,6 +163,21 @@ namespace oDb
                 cn.Close();
             }
         }
+        public double LeerResult(string procedure)
+        {
+            double valor;
+            string cn = GetStringConnection();
+            using (var conn = new SqlConnection(cn))
+                using (var command=new SqlCommand(procedure, conn)
+            {
+                CommandType=CommandType.StoredProcedure
+                })
+            {
+                conn.Open();
+                 valor =Convert.ToDouble(command.ExecuteScalar());
+            }
+            return valor;
+        }
         public DataTable Leer(string Procedure, params object[] Params)
         {
             SqlConnection cn = GetConnection();
