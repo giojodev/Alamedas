@@ -4,13 +4,16 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="dashboardfila1">
         <div class="dashboardinfo">
-            <h1>PRUEBA</h1>
+            <h1 class="titulo">Mora acumulada</h1>
+            <asp:Label ID="lblMora" class="titulo" runat="server" Text="Test"></asp:Label>
         </div>
         <div class="dashboardinfo">
-            <h2>prueba</h2>
+            <h2 class="titulo">Ingresos Mes en curso</h2>
+            <asp:Label ID="lblIngresos" runat="server" Text="Test"></asp:Label>
         </div>
         <div class="dashboardinfo">
-            <h3>PRUEBA</h3>
+            <h3 class="titulo">Gastos Mes en Curso</h3>
+            <asp:Label ID="lblGastos" runat="server" Text="Test"></asp:Label>
         </div>
     </div>
 </asp:Content>

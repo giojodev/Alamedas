@@ -45,10 +45,21 @@ input {
     justify-content:space-around;
     clear:both;
     float:left;
+    margin-left:20px;
 }
-.dashboardinfo{
-    border:solid 1px black;
-    display:block;
-    width:inherit;
-    height:100px;
+.dashboardinfo {
+    border: solid 1px black;
+    display: block;
+    width: 30em;
+    height: 100px;
+    margin-top: 2em;
+    margin-left: 5em;
+    margin-right: 2em;
+}
+.titulo{
+    clear:both;
+    font-weight:bold;
+    text-align:center;
+    font-size:30px;
+    color:palevioletred;
 }

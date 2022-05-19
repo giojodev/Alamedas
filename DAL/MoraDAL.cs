@@ -123,7 +123,12 @@ namespace DAL
             }
 
         }
-
+        public Double GetMoraDashboard()
+        {
+            double result = 0;
+            result = utilidad.LeerResult("SP_GETMORADASHBOARD");
+            return result;
+        }
         public int Editar(MoraEntity moraEntity)
         {
             int exito = 0;
