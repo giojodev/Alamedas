@@ -18,6 +18,10 @@ namespace BLL
         {
             return oMora.ObtenerMora(Mora);
         }
+        public double GetMoraDashboard()
+        {
+            return oMora.GetMoraDashboard();
+        }
         public MoraEntity Obtener(int Mora)
         {
 
