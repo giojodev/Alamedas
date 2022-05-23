@@ -181,7 +181,7 @@ namespace DAL
             int mes, anio;
             mes = DateTime.Now.Month;
             anio = DateTime.Now.Year;
-            int m = 0;
+            
             DataTable dt = new DataTable();
             try
             {
@@ -189,17 +189,17 @@ namespace DAL
                 foreach (DataRow dr in dt.Rows)
                 {
                     casa = Convert.ToInt32(dr["ID_CONDOMINO"]);
-                    m = utilidad.Save("MORAMENSUAL", mora, casa, concepto, mes, anio);
+                    return  utilidad.Save("MORAMENSUAL", mora, casa, concepto, mes, anio);
 
                 }
             }
             catch (Exception ex)
             {
                 throw new System.Exception(ex.Message);
-                m = 0;
+                return 0;
             }
 
-            return m;
+            return 1;
 
         }
         public int MoraAdelantada(int casa, string concepto, int mes, int anio)
@@ -217,7 +217,7 @@ namespace DAL
             catch (Exception ex)
             {
                 throw new System.Exception(ex.Message);
-                m = 0;
+                return 0;
             }
 
             return m;
