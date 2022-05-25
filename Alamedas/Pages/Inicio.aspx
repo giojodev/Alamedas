@@ -5,15 +5,15 @@
     <div class="dashboardfila1">
         <div class="dashboardinfo">
             <h1 class="titulo">Mora acumulada</h1>
-            <asp:Label ID="lblMora" class="titulo" runat="server" Text="Test"></asp:Label>
+            <asp:Label ID="lblMora" class="datoDashboard" runat="server" Text="Test"></asp:Label>
         </div>
         <div class="dashboardinfo">
             <h2 class="titulo">Ingresos Mes en curso</h2>
-            <asp:Label ID="lblIngresos" runat="server" Text="Test"></asp:Label>
+            <asp:Label ID="lblIngresos" class="datoDashboard" runat="server" Text="Test"></asp:Label>
         </div>
         <div class="dashboardinfo">
             <h3 class="titulo">Gastos Mes en Curso</h3>
-            <asp:Label ID="lblGastos" runat="server" Text="Test"></asp:Label>
+            <asp:Label ID="lblGastos" class="datoDashboard" runat="server" Text="Test"></asp:Label>
         </div>
     </div>
 </asp:Content>

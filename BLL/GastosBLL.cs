@@ -24,6 +24,10 @@ namespace BLL
 
             return gastosDAL.Nuevo(oTipGastosEntity);
         }
+        public double GetGastossDashboard()
+        {
+            return gastosDAL.GetGastossDashboard();
+        }
         public int Grabar(GastosEntity oTipGastosEntity)
         {
 

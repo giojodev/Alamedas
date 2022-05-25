@@ -24,6 +24,12 @@ namespace DAL
             }
             return DT;
         }
+        public double GetGastossDashboard()
+        {
+            double result = 0;
+            result = utilidad.LeerResult("SP_GETGASTOSDASHBOARD");
+            return result;
+        }
         public GastosEntity Obtener(int idGastos)
         {
             var oTipGastosEntity = new GastosEntity();
