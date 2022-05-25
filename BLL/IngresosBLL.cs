@@ -44,5 +44,9 @@ namespace BLL
         {
             return oingresos.Grabar(ingresosEntity);
         }
+        public double GetIngresosDashboard()
+        {
+            return oingresos.GetIngresosDashboard();
+        }
     }
 }

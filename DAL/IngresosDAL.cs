@@ -37,6 +37,12 @@ namespace DAL
             }
             return dt;
         }
+        public double GetIngresosDashboard()
+        {
+            double result = 0;
+            result = utilidad.LeerResult("SP_GETINGRESOSDASHBOARD");
+            return result;
+        }
         public IngresosEntity Obtener(int Consecutivo)
         {
             var oIngresos = new IngresosEntity();
