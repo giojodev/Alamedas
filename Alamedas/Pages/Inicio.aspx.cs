@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Services;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using BLL;
@@ -23,6 +24,12 @@ namespace Alamedas.Pages
             lblMora.Text=Convert.ToString(moraBll.GetMoraDashboard());
             lblIngresos.Text = Convert.ToString(ingresosBll.GetIngresosDashboard());
             lblGastos.Text = Convert.ToString(gastosBLL.GetGastossDashboard());
+        }
+        [WebMethod]
+        public string GetTopMora()
+        {
+
+            return "";
         }
     }
 }
