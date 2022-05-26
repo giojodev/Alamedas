@@ -178,6 +178,21 @@ namespace oDb
             }
             return valor;
         }
+        public DataTable ReadSP(string procedure)
+        {
+            DataTable dt = new DataTable();
+            string cn = GetStringConnection();
+            using (var conn = new SqlConnection(cn))
+            using (var command = new SqlCommand(procedure, conn)
+            {
+                CommandType = CommandType.StoredProcedure
+            })
+            {
+                conn.Open();
+                //dt = command.ExecuteReader();
+            }
+            return dt;
+        }
         public DataTable Leer(string Procedure, params object[] Params)
         {
             SqlConnection cn = GetConnection();

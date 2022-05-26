@@ -129,6 +129,13 @@ namespace DAL
             result = utilidad.LeerResult("SP_GETMORADASHBOARD");
             return result;
         }
+        public DataTable GetTopMora()
+        {
+            double result = 0;
+            DataTable dt = new DataTable();
+            dt = utilidad.LeerResult("SP_GETCONDOMINO_MORA_DASHBOARD");
+            return result;
+        }
         public int Editar(MoraEntity moraEntity)
         {
             int exito = 0;
