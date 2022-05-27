@@ -131,10 +131,10 @@ namespace DAL
         }
         public DataTable GetTopMora()
         {
-            double result = 0;
+            
             DataTable dt = new DataTable();
-            dt = utilidad.LeerResult("SP_GETCONDOMINO_MORA_DASHBOARD");
-            return result;
+            dt = utilidad.Leer("SP_GETCONDOMINO_MORA_DASHBOARD");
+            return dt;
         }
         public int Editar(MoraEntity moraEntity)
         {

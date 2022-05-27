@@ -193,6 +193,44 @@ namespace oDb
             }
             return dt;
         }
+        public DataTable Leer(string Procedure)
+        {
+            SqlConnection cn = GetConnection();
+            DataTable dt = new DataTable();
+            SqlCommand cmd = new SqlCommand();
+            SqlDataAdapter da = new SqlDataAdapter();
+            da.Dispose();
+            dt.Clear();
+            cmd.CommandText = Procedure;
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandTimeout = 30000;
+            cn.Open();
+            cmd.Connection = cn;
+            da.SelectCommand = cmd;
+            SqlCommandBuilder.DeriveParameters(cmd);
+            try
+            {
+                if (Params != null)
+                {
+                    for (int i = 0; i <= Params.Length; i++)
+                    {
+                        cmd.Parameters[i].Value = Params[i - 1];
+                    }
+                }
+                da.Fill(dt);
+            }
+            catch (Exception ex)
+            {
+                SaveError("INSETAR_ERROR", "Leer", ex.Message);
+                throw new Exception(ex.Message);
+
+            }
+            finally
+            {
+                cn.Close();
+            }
+            return dt;
+        }
         public DataTable Leer(string Procedure, params object[] Params)
         {
             SqlConnection cn = GetConnection();
