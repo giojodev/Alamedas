@@ -1,7 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
+using System.Web.Script.Serialization;
 using System.Web.Services;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -28,8 +31,39 @@ namespace Alamedas.Pages
         [WebMethod]
         public string GetTopMora()
         {
+            String result="";
+            try
+            {
+                
+                DataTable dt = new DataTable();
+                DataSet ds = new DataSet();
+                dt = moraBll.GetTopMora();
+                if (dt.Rows.Count > 0)
+                {
+                    result=DataSetToJSON(dt);
+                }
+            }
+            catch (Exception ex)
+            {
+                lblGastos.Text = ex.Message;
+            }
+            return result;
+            
+        }
+        public static string DataSetToJSON(DataTable dt)
+        {
+            Dictionary<string, object> dict = new Dictionary<string, object>();
+            object[] arr = new object[dt.Rows.Count + 1];
 
-            return "";
+            for (int i = 0; i <= dt.Rows.Count - 1; i++)
+            {
+                arr[i] = dt.Rows[i].ItemArray;
+            }
+
+            dict.Add(dt.TableName, arr);
+
+            JavaScriptSerializer json = new JavaScriptSerializer();
+            return json.Serialize(dict);
         }
     }
 }
