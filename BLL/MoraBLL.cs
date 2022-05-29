@@ -64,5 +64,9 @@ namespace BLL
         {
             return oMora.MoraAdelantada(casa, concepto, mes, anio);
         }
+        public DataTable GetTopMora()
+        {
+            return oMora.GetTopMora();
+        }
     }
 }
