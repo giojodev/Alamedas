@@ -28,7 +28,7 @@ namespace Alamedas.Pages
             lblIngresos.Text = Convert.ToString(ingresosBll.GetIngresosDashboard());
             lblGastos.Text = Convert.ToString(gastosBLL.GetGastossDashboard());
         }
-        [WebMethod]
+        [WebMethod()]
         public string GetTopMora()
         {
             String result="";
