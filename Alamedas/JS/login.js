@@ -5,4 +5,10 @@
 //})
 window.onload = (event) => {
     console.log("PREUBA")
+    var mora = $('#lblMora');
+    console.log(mora);
+}
+
+function getDashboard() {
+    
 }

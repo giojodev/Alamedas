@@ -1,12 +1,14 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage/Site1.Master" AutoEventWireup="true" CodeBehind="Inicio.aspx.cs" Inherits="Alamedas.Pages.Inicio" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <script src="../JS/login.js"></script>
+    <script src="../JS/jquery-3.6.0.min.js"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="dashboardfila1">
         <div class="dashboardinfo">
             <h1 class="titulo">Mora acumulada</h1>
             <asp:Label ID="lblMora" class="datoDashboard" runat="server" Text="Test"></asp:Label>
+            <label id="lblmora1">test</label>
         </div>
         <div class="dashboardinfo">
             <h2 class="titulo">Ingresos Mes en curso</h2>
