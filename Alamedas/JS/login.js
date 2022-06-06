@@ -4,11 +4,12 @@
 //    console.log('The page has fully loaded');
 //})
 window.onload = (event) => {
-    console.log("PREUBA")
-    var mora = $('#lblMora');
-    console.log(mora);
+    getDashboard();
+    
 }
 
 function getDashboard() {
+    $.ajax();
+    $("tablaTopMora").DataTable();
     
 }

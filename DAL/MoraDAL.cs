@@ -133,7 +133,7 @@ namespace DAL
         {
             
             DataTable dt = new DataTable();
-            dt = utilidad.ReadSP("SP_GETCONDOMINO_MORA_DASHBOARD");
+            dt = utilidad.Leer("SP_GETCONDOMINO_MORA_DASHBOARD");
             return dt;
         }
         public int Editar(MoraEntity moraEntity)
