@@ -9,6 +9,7 @@ using System.Web.Services;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using BLL;
+using Newtonsoft.Json;
 
 namespace Alamedas.Pages
 {
@@ -27,6 +28,7 @@ namespace Alamedas.Pages
             lblMora.Text=Convert.ToString(moraBll.GetMoraDashboard());
             lblIngresos.Text = Convert.ToString(ingresosBll.GetIngresosDashboard());
             lblGastos.Text = Convert.ToString(gastosBLL.GetGastossDashboard());
+            GetTopMora();
         }
         [WebMethod()]
         public string GetTopMora()
@@ -52,18 +54,21 @@ namespace Alamedas.Pages
         }
         public static string DataSetToJSON(DataTable dt)
         {
-            Dictionary<string, object> dict = new Dictionary<string, object>();
-            object[] arr = new object[dt.Rows.Count + 1];
+            string JSONString = string.Empty;
+            JSONString = JsonConvert.SerializeObject(dt);
+            return JSONString;
+            //Dictionary<string, object> dict = new Dictionary<string, object>();
+            //object[] arr = new object[dt.Rows.Count + 1];
 
-            for (int i = 0; i <= dt.Rows.Count - 1; i++)
-            {
-                arr[i] = dt.Rows[i].ItemArray;
-            }
+            //for (int i = 0; i <= dt.Rows.Count - 1; i++)
+            //{
+            //    arr[i] = dt.Rows[i].ItemArray;
+            //}
 
-            dict.Add(dt.TableName, arr);
+            //dict.Add(dt.TableName, arr);
 
-            JavaScriptSerializer json = new JavaScriptSerializer();
-            return json.Serialize(dict);
+            //JavaScriptSerializer json = new JavaScriptSerializer();
+            //return json.Serialize(dict);
         }
     }
 }

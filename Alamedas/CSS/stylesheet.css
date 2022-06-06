@@ -71,3 +71,17 @@ input {
     font-size: 35px;
     margin-left: 40%;
 }
+.espacioTabla{
+    float:left;
+    clear:both;
+    border:1px solid black;
+    margin-top: 2em;
+    margin-left: 6.1em;
+    margin-right: 2em;
+    width:60em;
+    height:30em;
+}
+/*#tablaTopMora{
+    display:flex;
+
+}*/
