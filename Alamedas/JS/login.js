@@ -9,7 +9,19 @@ window.onload = (event) => {
 }
 
 function getDashboard() {
-    $.ajax();
-    $("tablaTopMora").DataTable();
+    debugger;
+    $.ajax({
+        type: "POST",
+        url: "../Pages/Inicio.aspx/GetTopMora",
+        contentType: "application/json;charset=uft-8",
+        dataType: "json",
+        success: function (data) {
+            console.log(data);
+        },
+        failure: function(response) {
+            console.error(response);
+        }
+    });
+    //$("tablaTopMora").DataTable();
     
 }
