@@ -1,15 +1,13 @@
 ﻿'use strict'
 
-//window.addEventListener('load', (event) = {
-//    console.log('The page has fully loaded');
-//})
+
 window.onload = (event) => {
     getDashboard();
     
 }
 
 function getDashboard() {
-    debugger;
+    var datatable;
     $.ajax({
         type: "POST",
         url: "../Pages/Inicio.aspx/GetTopMora",
@@ -17,11 +15,16 @@ function getDashboard() {
         dataType: "json",
         success: function (data) {
             console.log(data);
+            const obj = jQuery.parseJSON({ data });
+            //const obj = data;
+            console.log(obj);
         },
         failure: function(response) {
             console.error(response);
         }
     });
+
+    console.log(datatable);
     //$("tablaTopMora").DataTable();
     
 }

@@ -11,6 +11,7 @@ using System.Web.UI.WebControls;
 using BLL;
 using Newtonsoft.Json;
 
+
 namespace Alamedas.Pages
 {
     public partial class Inicio : System.Web.UI.Page
@@ -30,45 +31,38 @@ namespace Alamedas.Pages
             lblGastos.Text = Convert.ToString(gastosBLL.GetGastossDashboard());
             
         }
-        [WebMethod()]
-        public string GetTopMora()
+        [WebMethod]
+        public static string GetTopMora()
         {
+            MoraBLL mora = new MoraBLL();
             String result="";
             try
             {
                 
                 DataTable dt = new DataTable();
                 DataSet ds = new DataSet();
-                dt = moraBll.GetTopMora();
+                dt = mora.GetTopMora();
                 if (dt.Rows.Count > 0)
                 {
-                    result=DataSetToJSON(dt);
+                   
+                    result = JsonConvert.SerializeObject(dt);
+                    //return result;
                 }
             }
             catch (Exception ex)
             {
-                lblGastos.Text = ex.Message;
+                result = ex.Message;
             }
+            
             return result;
             
         }
-        public static string DataSetToJSON(DataTable dt)
-        {
-            string JSONString = string.Empty;
-            JSONString = JsonConvert.SerializeObject(dt);
-            return JSONString;
-            //Dictionary<string, object> dict = new Dictionary<string, object>();
-            //object[] arr = new object[dt.Rows.Count + 1];
-
-            //for (int i = 0; i <= dt.Rows.Count - 1; i++)
-            //{
-            //    arr[i] = dt.Rows[i].ItemArray;
-            //}
-
-            //dict.Add(dt.TableName, arr);
-
-            //JavaScriptSerializer json = new JavaScriptSerializer();
-            //return json.Serialize(dict);
-        }
+        //public string DataSetToJSON(DataTable dt)
+        //{
+        //    string JSONString = string.Empty;
+        //    JSONString = JsonConvert.SerializeObject(dt);
+        //    return JSONString;
+           
+        //}
     }
 }
