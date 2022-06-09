@@ -30,7 +30,7 @@
                 <thead>
                   <tr>
                      <th>CONDOMINO</th>
-                     <th>MORA</th>
+                     <th>Mora</th>
                  </tr>
                 </thead>
                 <tbody id="tblContentMora">
