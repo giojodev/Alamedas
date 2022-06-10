@@ -26,7 +26,10 @@ function getDashboard() {
                         data:'CONDOMINO'
                     },
                     {
-                        data:'Mora'
+                        data:'MORA'
+                    },
+                    {
+                        data: 'MESES'
                     }
                                 ]
             });
