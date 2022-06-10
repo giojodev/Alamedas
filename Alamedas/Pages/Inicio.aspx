@@ -30,7 +30,8 @@
                 <thead>
                   <tr>
                      <th>CONDOMINO</th>
-                     <th>Mora</th>
+                     <th>MORA</th>
+                     <th>MESES</th>
                  </tr>
                 </thead>
                 <tbody id="tblContentMora">
