@@ -111,8 +111,6 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
-    <Content Include="CSS\bulma.min.css" />
-    <Content Include="CSS\dataTables.bulma.min.css" />
     <Content Include="CSS\stylesheet.css" />
     <Content Include="JS\Buttons-2.2.3\css\buttons.bootstrap.css" />
     <Content Include="JS\Buttons-2.2.3\css\buttons.bootstrap.min.css" />

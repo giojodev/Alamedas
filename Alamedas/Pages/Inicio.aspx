@@ -6,9 +6,10 @@
   
 
     <link rel="stylesheet" type="text/css" href="../JS/datatables.min.css"/>
-    <link href="../CSS/dataTables.bulma.min.css" rel="stylesheet" />
-    <link href="../CSS/bulma.min.css" rel="stylesheet" />
-   
+    <%--<link href="../CSS/dataTables.bulma.min.css" rel="stylesheet" />
+    <link href="../CSS/bulma.min.css" rel="stylesheet" />--%>
+    <%--<link href="../JS/DataTables-1.12.1/css/dataTables.bulma.min.css" rel="stylesheet" />--%>
+    <link href="../JS/DataTables-1.12.1/css/dataTables.bulma.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="dashboardfila1">
@@ -27,7 +28,7 @@
     </div>
     <div class="espacioTabla" >
         
-            <table id="tablaTopMora" class="display">
+            <table id="tablaTopMora" class="table is-striped">
                 <thead>
                   <tr>
                      <th>CONDOMINO</th>
@@ -40,6 +41,7 @@
             </table>
         
     </div>
-     
+    <script src="../JS/DataTables-1.12.1/js/dataTables.bulma.js"></script>
+    <%--<script src="../JS/DataTables-1.12.1/js/dataTables.bulma.min.js"></script>--%>
      <script type="text/javascript" src="../JS/datatables.min.js"></script>
 </asp:Content>

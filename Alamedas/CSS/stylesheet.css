@@ -81,7 +81,15 @@ input {
     width:60em;
     height:30em;
 }
-/*#tablaTopMora{
-    display:flex;
-
-}*/
+#tablaTopMora{
+    padding:20px;
+}
+div.dataTables_wrapper div.dataTables_filter label{
+    padding-right:20px;
+}
+div.dataTables_wrapper div.dataTables_filter label{
+    padding:20px;
+}
+div.dataTables_wrapper div.dataTables_filter label{
+    padding-left:20px;
+}
