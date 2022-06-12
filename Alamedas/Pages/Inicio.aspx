@@ -6,7 +6,8 @@
   
 
     <link rel="stylesheet" type="text/css" href="../JS/datatables.min.css"/>
- 
+    <link href="../CSS/dataTables.bulma.min.css" rel="stylesheet" />
+    <link href="../CSS/bulma.min.css" rel="stylesheet" />
    
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
