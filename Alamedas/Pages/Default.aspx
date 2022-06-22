@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="Alamedas.Pages.Default" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.cs" Inherits="Alamedas.Pages.Default" %>
 
 <!DOCTYPE html>
 
