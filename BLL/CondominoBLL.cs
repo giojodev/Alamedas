@@ -30,6 +30,11 @@ namespace BLL
                 return condomino.Editar(condominoEntity);
             }
         }
+        public DataTable GetResidents()
+        {
+
+            return condomino.GetResidents();
+        }
         public CondominoEntity Obtener_CONDOMINO_MORA(int idMora)
         {
             int casa = condomino.Obtener_CONDOMINO_MORA(idMora);

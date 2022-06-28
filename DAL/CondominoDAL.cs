@@ -25,6 +25,21 @@ namespace DAL
             }
             return DT;
         }
+        public DataTable GetResidents()
+        {
+
+            var DT = new DataTable();
+            try
+            {
+                DT = utilidad.Read("GETRESIDENTS");
+            }
+            catch (Exception ex)
+            {
+                utilidad.SaveError("INSERT_ERROR", ex.Message, "Listar Condomino");
+                throw new System.ArgumentException(ex.Message);
+            }
+            return DT;
+        }
         public CondominoEntity Obtain(int id_Condomino)
         {
             var oCondomino = new CondominoEntity();

@@ -152,6 +152,7 @@
     <Content Include="JS\Buttons-2.2.3\js\buttons.semanticui.min.js" />
     <Content Include="JS\Buttons-2.2.3\js\dataTables.buttons.js" />
     <Content Include="JS\Buttons-2.2.3\js\dataTables.buttons.min.js" />
+    <Content Include="JS\Condomino.js" />
     <Content Include="JS\DataTables-1.12.1\css\dataTables.bootstrap.css" />
     <Content Include="JS\DataTables-1.12.1\css\dataTables.bootstrap.min.css" />
     <Content Include="JS\DataTables-1.12.1\css\dataTables.bootstrap4.css" />
@@ -200,6 +201,7 @@
     <Content Include="JS\jquery-3.6.0.min.js" />
     <Content Include="JS\login.js" />
     <Content Include="Login\Login.aspx" />
+    <Content Include="Pages\Condominos.aspx" />
     <Content Include="Pages\Default.aspx" />
     <Content Include="Pages\Inicio.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
@@ -213,18 +215,28 @@
   <ItemGroup>
     <Compile Include="Login\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Login\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="MasterPage\Site1.Master.cs">
       <DependentUpon>Site1.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="MasterPage\Site1.Master.designer.cs">
       <DependentUpon>Site1.Master</DependentUpon>
     </Compile>
+    <Compile Include="Pages\Condominos.aspx.cs">
+      <DependentUpon>Condominos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Condominos.aspx.designer.cs">
+      <DependentUpon>Condominos.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Pages\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>

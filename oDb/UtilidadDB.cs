@@ -103,10 +103,21 @@ namespace oDb
             {
                 if (Params != null)
                 {
-                    for (int i = 0; i < Params.Length; i++)
+                    if(Params.Length==0)
                     {
-                        cmd.Parameters[i].Value = Params[i - 1];
+                        for (int i = 1; i < Params.Length; i++)
+                        {
+                            cmd.Parameters[i].Value = Params[i - 1];
+                        }
                     }
+                    else
+                    {
+                        for (int i = 1; i < Params.Length; i++)
+                        {
+                            cmd.Parameters[i].Value = Params[i];
+                        }
+                    }
+                    
                 }
                 da.Fill(dt);
             }
