@@ -30,7 +30,7 @@
         <a class="nav-link" href="#">Inicio</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Condominos</a>
+        <a class="nav-link" href="../Pages/Condominos.aspx">Condominos</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Ingresos</a>
